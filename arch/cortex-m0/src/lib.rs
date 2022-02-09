@@ -258,8 +258,7 @@ pub unsafe extern "C" fn switch_to_user(
     ",
     inout("r0") user_stack,
     in("r1") process_regs,
-    out("r2") _, out("r3") _, out("r4") _, out("r5") _, out("r8") _,
-    out("r10") _, out("r11") _, out("r12") _);
+    out("r2") _, out("r3") _, out("r4") _, out("r5") _, out("r11") _);
 
     user_stack as *mut u8
 }
